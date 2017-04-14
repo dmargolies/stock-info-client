@@ -1,19 +1,21 @@
 {{input key-up='search' class='form-control' placeholder='Enter name'}}
 <div class='row'>
   <div class='col-sm-6'>
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th>Symbol</th>
           <th>Name</th>
         </tr>
       </thead>
-      {{#each model as |stock|}}
-        {{#stock-table-row stock=stock selectedStock=selectedStock onSelect=(action "select")}}
-          <td>{{stock.symbol}}</td>
-          <td>{{stock.name}}</td>
-        {{/stock-table-row}}
-      {{/each}}
+      <tbody>
+        {{#each model as |stock|}}
+          {{#stock-table-row stock=stock selectedStock=selectedStock onSelect=(action "select")}}
+            <td>{{stock.symbol}}</td>
+            <td>{{stock.name}}</td>
+          {{/stock-table-row}}
+        {{/each}}
+    </tbody>
     </table>
   </div>
   <div class='col-sm-6'>

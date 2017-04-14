@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'tr',
-  classNameBindings: ['selected'],
+  classNames: ['selectable'],
+  classNameBindings: ['selected:active'],
   selected: function() {
-    const selectedStock = this.get('selectedStock');
     return this.get('selectedStock') === this.get('stock');
   }.property('selectedStock', 'stock'),
   click() {
