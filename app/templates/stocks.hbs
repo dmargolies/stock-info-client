@@ -1,0 +1,15 @@
+{{input key-up='search' class='form-control' placeholder='Enter name'}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  {{#each model as |stock|}}
+    <tr>
+      <td>{{stock.symbol}}</td>
+      <td>{{stock.name}}</td>
+    </tr>
+  {{/each}}
+</table>
