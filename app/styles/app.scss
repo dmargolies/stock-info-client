@@ -1,3 +1,11 @@
 body {
   padding-top: 70px;
 }
+
+tr.selectable {
+  cursor: pointer;
+}
+
+tr.selected {
+  background-color: blue;
+}

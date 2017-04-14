@@ -1,15 +1,24 @@
 {{input key-up='search' class='form-control' placeholder='Enter name'}}
-<table class="table">
-  <thead>
-    <tr>
-      <th>Symbol</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  {{#each model as |stock|}}
-    <tr>
-      <td>{{stock.symbol}}</td>
-      <td>{{stock.name}}</td>
-    </tr>
-  {{/each}}
-</table>
+<div class='row'>
+  <div class='col-sm-6'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      {{#each model as |stock|}}
+        {{#stock-table-row stock=stock selectedStock=selectedStock onSelect=(action "select")}}
+          <td>{{stock.symbol}}</td>
+          <td>{{stock.name}}</td>
+        {{/stock-table-row}}
+      {{/each}}
+    </table>
+  </div>
+  <div class='col-sm-6'>
+    {{#if selectedStock}}
+      {{price-chart stock=selectedStock}}
+    {{/if}}
+  </div>
+</div>
