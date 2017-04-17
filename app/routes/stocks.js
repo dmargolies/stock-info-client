@@ -5,6 +5,9 @@ export default Ember.Route.extend({
     search(query) {
       //TODO - we may want to debounce the search (or keyup event)
       //to prevent overloading the server when the user is typing
+      //TODO - since we are doing a prefix search we should only
+      //make an ajax request when the first letter changes
+      //and just filter locally at other times
       const controller = this.controllerFor('stocks');
       query = query.trim();
       if(!query) {
