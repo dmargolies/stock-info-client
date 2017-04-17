@@ -22,7 +22,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* This application uses a Rails application (available at <placeholder>)as a backend, which runs on port 3000 by default.
+* This application uses a Rails application (available [here](https://github.com/dmargolies/stock-info-server)) as a backend, which runs on port 3000 by default.
 * `ember serve --proxy http://localhost:3000`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
