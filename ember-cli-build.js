@@ -21,5 +21,7 @@ module.exports = function(defaults) {
 
   //TODO - consider CDN
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  //TODO - d3 supports es6 modules
+  app.import('bower_components/d3/d3.js');
   return app.toTree();
 };

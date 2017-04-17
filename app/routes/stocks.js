@@ -12,6 +12,8 @@ export default Ember.Route.extend({
       } else {
         this.get('store').query('stock', {query}).then((stocks) => {
           this.controllerFor('stocks').set('model', stocks);
+        }).catch((error) => {
+          Ember.Logger.error('failed to query for stock with string ' + query, error);
         });
       }
     }
