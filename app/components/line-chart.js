@@ -1,6 +1,5 @@
 import Ember from 'ember';
-
-//const parseTime = d3.timeParse("%d-%b-%y");
+/* global d3 */
 const parseTime = d3.timeParse("%Y-%m-%d");
 
 export default Ember.Component.extend({
