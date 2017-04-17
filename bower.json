@@ -1,6 +1,7 @@
 {
   "name": "stock-info",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "d3": "^4.8.0"
   }
 }
